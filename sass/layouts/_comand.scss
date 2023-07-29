@@ -1,0 +1,114 @@
+.section-team {
+  background-color: var(--background-grey-color);
+}
+
+.container__title-team {
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  @include font(null, 28px, 1.1785, null);
+  text-align: center;
+  @include desktop {
+    @include font(null, 36px, 1.1666, null);
+  }
+}
+
+.list-team {
+  @include flex(flex, null, center);
+  flex-wrap: wrap;
+  gap: 30px;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+
+.list-team__card {
+  max-width: 100%;
+  @include tablet {
+    max-width: calc((100% - 30px) / 2);
+    
+  }
+  @include desktop {
+    max-width: calc((100% - 90px) / 4);
+  }
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.list-team__photo {
+  max-width: 100%;
+  @include tablet {
+    max-width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    max-width: calc((100% - 90px) / 4);
+  }
+}
+
+.list-team__photo > img {
+  max-width: 100%;
+}
+
+.card-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--white-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-description__team-list {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  @include font(500, 16px, 1.1875, null);
+  text-align: center;
+}
+
+.card-description__list-p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.social-list {
+  @include flex(flex, null, center);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-list__social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-list__social-links {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  color: var(--social-icon-color);
+  border-radius: 50%;
+  @include flex(flex, center, center);
+  transition: background-color var(--time) var(--timing-function),
+    color var(--time) var(--timing-function);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+    
+    &:hover .social-list__social-icon,
+    &:focus .social-list__social-icon {
+      fill: var(--white-color);
+    }
+}
+
+.social-list__social-icon {
+  fill: currentColor;
+  &:hover,
+  &:focus {
+    fill: var(--white-color);
+  }
+}
+

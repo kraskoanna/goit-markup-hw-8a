@@ -1,0 +1,92 @@
+.projects-list {
+  @include flex(flex, null, null);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.projects-list__projects-box > .projects-list__projects-link{
+  max-width: 100%;
+  display: block;
+  &:hover,
+  &:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.projects-list__projects-link {
+  transition: box-shadow var(--time) var(--timing-function),
+    border-box var(--time) var(--timing-function);
+}
+
+.projects-image {
+  position: relative;
+  overflow: hidden;
+  width: 370px;
+  height: 294px;
+}
+
+.projects-image__projects-focus {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 63px 24px;
+  @include font(400, 18px, 1.5555, null);
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  overflow: auto;
+  .projects-list__projects-box:hover & {
+    transform: translateY(0);
+    transition: transform 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.image-tehno {
+  background-image: url(../images/texno.jpg);
+}
+.image-poster {
+  background-image: url(../images/posters.jpg);
+}
+.image-seafood {
+  background-image: url(../images/seafood.jpg);
+}
+.image-prime {
+  background-image: url(../images/project-prime.jpg);
+}
+.image-boxes {
+  background-image: url(../images/boxes.jpg);
+}
+.image-inspiration {
+  background-image: url(../images/inspiration.jpg);
+}
+.image-limited {
+  background-image: url(../images/limited.jpg);
+}
+.image-lab {
+  background-image: url(../images/lab.jpg);
+}
+.image-groving {
+  background-image: url(../images/growing.jpg);
+}
+
+.projects-border {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.projects-border__projects-title {
+  margin-bottom: 4px;
+  @include font(null, 18px, 2, 0.06em);
+  color: var(--title-text-color);
+}
+
+.projects-border__projects-text {
+  @include font(null, 16px, 1.875, null);
+  color: var(--primary-text-color);
+}

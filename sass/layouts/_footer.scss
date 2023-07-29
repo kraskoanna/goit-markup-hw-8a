@@ -1,0 +1,206 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-background-color);
+  text-decoration: none;
+}
+
+.container-footer {
+  @include flex(flex, center, center);
+  flex-wrap: wrap;
+  flex-direction: column;
+  @include tablet {
+    @include flex(flex, center, space-around);
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @include desktop {
+    @include flex(null, baseline, null);
+    flex-wrap: nowrap;
+    
+  }
+}
+
+.container-footer__logo-link {
+  margin-bottom: 28px;
+  @include flex(flex, null, center);
+  font-family: "Raleway", sans-serif;
+  @include font(null, 24px, 1.1666, null);
+  text-decoration: none;
+  color: var(--white-color);
+  @include desktop {
+    @include font(null, 26px, 1.1923, null);
+    @include flex(block, null, null);
+  }
+}
+
+.container-footer__logo-footer {
+  @include font(null, 24px, 1.1666, null);
+  color: var(--accent-color);
+  @include desktop {
+    @include font(null, 26px, 1.1923, null);
+  }
+}
+
+.address {
+  list-style: none;
+  margin-bottom: 60px;
+  @include flex(flex, center, null);
+  flex-direction: column;
+  @include desktop {
+    @include flex(block, null, null);
+  }
+}
+
+.address__addres-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__address-map {
+  @include font(null, null, 1.1428, null);
+  font-style: normal;
+  text-decoration: none;
+  color: var(--white-color);
+  &:hover,
+  &:focus {
+  color: var(--accent-color);
+  }
+  @include desktop {
+    @include font(null, null, 1.7142, null);
+  }
+}
+
+.address__address-mail,
+.address__address-tel {
+  @include font(null, null, 1.1428, null);
+  color: var(--black-opacity-color);
+  text-decoration: none;
+  font-style: normal;
+  &:hover,
+  &:focus {
+  color: var(--accent-color);
+  }
+  @include desktop {
+    @include font(null, null, 1.7142, null);
+  }
+}
+
+.social-block {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  margin-bottom: 60px;
+  @include desktop {
+    @include flex(block, center, center);
+    margin-left: 70px;
+  }
+}
+
+.social-block__social-footer {
+  @include flex(block, center, center);
+  color: var(--white-color);
+  margin-bottom: 20px;
+  @include font(700, null, 1.1428, null);
+  text-transform: uppercase;
+}
+
+.social-footer-list {
+  @include flex(flex, null, center);
+  gap: 10px;
+}
+
+.social-footer-list__footer-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-footer-list__footer-link {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+  border-radius: 50%;
+  @include flex(flex, center, center);
+  transition: background-color var(--time) var(--timing-function),
+    color var(--time) var(--timing-function);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+    
+}
+
+.social-footer-list__footer-icon {
+  fill: currentColor;
+}
+
+.social-input {
+  @include desktop {
+    margin-left: auto;
+  }
+}
+
+.social-input__social-footer {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  color: var(--white-color);
+  margin-bottom: 20px;
+  @include font(700, null, 1.1428, null);
+  text-transform: uppercase;
+  @include desktop {
+    @include flex(block, center, center);
+  }
+}
+
+.input-flex {
+  @include flex(flex, center, null);
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.footer-form__footer-input {
+  width: 280px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  @include font(400, 16px, 1.25, null);
+  @include flex(null, center, null);
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+    &:hover,
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+    @include tablet {
+      width: 358px;
+    }
+}
+
+.footer-form__btn-footer {
+  width: 200px;
+  height: 50px;
+  @include flex(flex, center, space-between);
+  text-align: center;
+  margin-left: 12px;
+  padding-left: 28px;
+  padding-right: 28px;
+  @include font(700, 16px, 30px, 0.06em);
+  color: var(--white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    background: var(--background-active-button);
+  }
+}
+
+.footer-form__icone-btn-footer {
+  fill: var(--white-color);
+}

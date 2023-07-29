@@ -1,0 +1,20 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --background-grey-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+  --black-color: #000000;
+  --black-opacity-color: rgba(255, 255, 255, 0.6);
+  --background-active-button: #188ce8;
+  --border-color: #ececec;
+  --background-img-color: #c4c4c4;
+  --social-icon-color: #afb1b8;
+  --time: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --gra: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+}

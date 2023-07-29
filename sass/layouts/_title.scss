@@ -1,0 +1,44 @@
+.section-title {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+}
+
+.container__title {
+  @include desktop {
+    margin-bottom: 50px;
+  @include font(null, 36px, 1.1666, null);
+  color: var(--title-text-color);
+  text-align: center;
+  }
+}
+
+.list-li {
+  @include desktop {
+    @include flex(flex, null, center);
+  flex-wrap: wrap;
+  gap: 30px;
+  }
+  
+}
+
+.list-li__title-box {
+  position: relative;
+}
+
+.title-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include flex(flex, center, center);
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.title-text__title-p {
+  @include font(700, 14px, 1.1428, null);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+}

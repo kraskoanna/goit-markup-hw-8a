@@ -1,0 +1,246 @@
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__conteiner {
+  @include flex(flex, center, space-between);
+}
+
+.header__logo {
+  @include font(null, 24px, 1.1666, 0.03em);
+  color: var(--accent-color);
+  @include desktop {
+    @include font(null, 26px, 1.1923, 0.03em);
+  }
+}
+
+/*---------навігація сайту------------*/
+
+.menu {
+  @include flex(flex, null, null);
+}
+
+.navigation {
+  display: none;
+  @include tablet {
+    display: flex;
+    margin-right: auto;
+  }
+}
+
+/* .header-nav .item {
+  background-color: rgb(7, 250, 19);
+} */
+/* .header-nav .item:not( :last-child) {
+  margin-right: 50px;
+} */
+/* .header-nav .item:last-child {
+  margin-right: 0;
+} */
+
+.menu {
+  @include tablet {
+    gap: 50px;
+    margin-right: auto;
+    }
+  
+}
+/* .header-nav .item + .item {
+  margin-left: 50px;
+} */
+.menu__link {
+  @include tablet {
+    color: var(--title-text-color);
+    @include font(500, null, 1.1428, 0.02em);
+    position: relative;
+    padding-bottom: 33px;
+    transition: color var(--time) var(--timing-function);
+    &:hover, 
+    &:focus {
+    color: var(--accent-color);}
+  }
+  
+}
+
+.current {
+  @include tablet {
+    color: var(--accent-color);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    }
+  }
+}
+
+/*-----авторизація навігації---------*/
+.auth-nav {
+  display: none;
+  @include tablet {
+    @include flex(flex, null, flex-end);
+    flex-direction: row;
+    @include font(null, null, 1.1428, 0.02em);
+    text-decoration: none;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.auth-nav__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.auth-nav .auth-nav__item + .auth-nav__item {
+  @include tablet {
+    margin-right: 15px;
+  }
+}
+
+.auth-nav__item .auth-nav__link {
+  @include tablet {
+    @include flex(flex, center, null);
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+}
+
+.auth-nav__link {
+  @include tablet {
+    font-weight: 500;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color var(--time) var(--timing-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.auth-nav__icon-smartphone,
+.auth-nav__icon-envelope {
+  @include tablet {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+// .header-menu {
+//   display: flex;
+//   width: 100%;
+//   margin-right: 15px;
+//   justify-content: flex-end;
+//   @include tablet {
+//     display: none;
+//   }
+// }
+
+  .menu-open {
+  color: var(--title-text-color);
+  background-color: #fff;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.menu-open__header-menu {
+  display: flex;
+  fill: currentColor;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+
+}
+
+.menu-list {
+  margin-bottom: 306px;
+}
+
+.menu-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-list__link {
+  color: #212121;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
+.mob-phone__link{
+  display: block;
+  margin-bottom: 32px;
+  color: #2196F3;
+  font-family: Roboto;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.68px;
+}
+
+.mob-mailto__link{
+  color: #757575;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  
+}
+
+.mob-soc {
+  margin-top: 64px;
+  display: flex;
+}
+
+// .mob-soc_item {
+  
+// }
+
+.mob-soc_item::before {
+  width: 1px;
+  height: 22px;
+  color: var(--title-text-color);
+  background: rgba(33, 33, 33, 0.20);
+
+}
+
+.mob-soc_link {
+  color: #2196F3;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: 0.36px;
+}

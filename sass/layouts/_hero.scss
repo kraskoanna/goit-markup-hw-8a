@@ -1,0 +1,65 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 100%;
+  margin: auto;
+  background-image: var(--gra), url(../../images/hero-bg-mobile.jpg);
+    @include retina {
+      background-image: var(gra), url(../../images/hero-bg-mobile2x.jpg);
+    }
+  background-color: var(--background-img-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include tablet {
+    background-image: var(--gra), url(../../images/hero-bg-tablet.jpg);
+    background-color: var(--background-img-color);
+  
+    @include retina {
+        background-image: var(gra), url(../../images/hero-bg-tablet2x.jpg);
+      }
+    }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: var(--gra), url(../images/hero-bg-desktop.jpg);
+    background-color: var(--background-img-color);
+    @include retina {
+      background-image: var(gra), url(../../images/hero-bg-desktop2x.jpg);
+    }
+  }
+} 
+
+.container__hero-title {
+  width: 290px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  @include font(900, 20px, 1.6153, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+  @include mobile {
+    font-size: 26px;
+    width: 100%;
+  }
+  @include tablet {
+    width: 360px;
+    margin: 0 auto 30px auto;
+  }
+  @include desktop {
+    width: 696px;
+    @include font(900, 44px, 1.3636, null);
+  }
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--background-active-button);
+  color: var(--white-color);
+}
