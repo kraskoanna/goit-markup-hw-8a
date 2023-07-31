@@ -44,8 +44,7 @@
   @include tablet {
     gap: 50px;
     margin-right: auto;
-    }
-  
+  }
 }
 /* .header-nav .item + .item {
   margin-left: 50px;
@@ -57,25 +56,25 @@
     position: relative;
     padding-bottom: 33px;
     transition: color var(--time) var(--timing-function);
-    &:hover, 
+    &:hover,
     &:focus {
-    color: var(--accent-color);}
+      color: var(--accent-color);
+    }
   }
-  
 }
 
 .current {
   @include tablet {
     color: var(--accent-color);
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
     }
   }
 }
@@ -147,12 +146,17 @@
 //   }
 // }
 
-  .menu-open {
+.menu-open {
+  width: 40px;
+  height: 40px;
   color: var(--title-text-color);
   background-color: #fff;
   &:hover,
   &:focus {
     fill: var(--accent-color);
+  }
+  @include tablet {
+    display: none;
   }
 }
 
@@ -174,7 +178,6 @@
 .menu-close {
   display: block;
   margin-left: auto;
-
 }
 
 .menu-list {
@@ -195,10 +198,10 @@
   letter-spacing: 0.8px;
 }
 
-.mob-phone__link{
+.mob-phone__link {
   display: block;
   margin-bottom: 32px;
-  color: #2196F3;
+  color: #2196f3;
   font-family: Roboto;
   font-size: 34px;
   font-style: normal;
@@ -207,7 +210,7 @@
   letter-spacing: 0.68px;
 }
 
-.mob-mailto__link{
+.mob-mailto__link {
   color: #757575;
   font-family: Roboto;
   font-size: 24px;
@@ -215,7 +218,6 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.48px;
-  
 }
 
 .mob-soc {
@@ -224,19 +226,18 @@
 }
 
 // .mob-soc_item {
-  
+
 // }
 
 .mob-soc_item::before {
   width: 1px;
   height: 22px;
   color: var(--title-text-color);
-  background: rgba(33, 33, 33, 0.20);
-
+  background: rgba(33, 33, 33, 0.2);
 }
 
 .mob-soc_link {
-  color: #2196F3;
+  color: #2196f3;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
