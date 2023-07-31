@@ -288,10 +288,17 @@ justify-content: space-around;
   width: 40px;
   height: 40px;
   color: var(--title-text-color);
-  background-color: #fff;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu-open:hover, .menu-open:focus {
-  fill: var(--accent-color);
+  color: var(--accent-color);
+}
+.menu-open-close:focus, .menu-open-close:hover {
+  fill: #188ce8;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .menu-open {
@@ -300,7 +307,7 @@ justify-content: space-around;
 }
 
 .menu-open__header-menu {
-  display: flex;
+  display: block;
   fill: currentColor;
 }
 
@@ -315,8 +322,8 @@ justify-content: space-around;
 }
 
 .menu-close {
-  display: block;
   margin-left: auto;
+  background-color: transparent;
 }
 
 .menu-list {
@@ -399,7 +406,7 @@ justify-content: space-around;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(gra), url(../../images/hero-bg-mobile2x.jpg);
+    background-image: var(--gra), url(../../images/hero-bg-mobile2x.jpg);
   }
 }
 @media screen and (min-width: 480px) {

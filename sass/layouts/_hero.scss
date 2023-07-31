@@ -10,7 +10,7 @@
   margin: auto;
   background-image: var(--gra), url(../../images/hero-bg-mobile.jpg);
   @include retina {
-    background-image: var(gra), url(../../images/hero-bg-mobile2x.jpg);
+    background-image: var(--gra), url(../../images/hero-bg-mobile2x.jpg);
   }
   background-color: var(--background-img-color);
   background-repeat: no-repeat;

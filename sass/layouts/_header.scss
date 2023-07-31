@@ -150,10 +150,17 @@
   width: 40px;
   height: 40px;
   color: var(--title-text-color);
-  background-color: #fff;
+  background-color: transparent;
+  @include flex(flex, center, center);
   &:hover,
   &:focus {
-    fill: var(--accent-color);
+    color: var(--accent-color);
+  }
+  &-close:focus,
+  &-close:hover {
+    fill: #188ce8;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   @include tablet {
     display: none;
@@ -161,7 +168,7 @@
 }
 
 .menu-open__header-menu {
-  display: flex;
+  display: block;
   fill: currentColor;
 }
 
@@ -176,8 +183,8 @@
 }
 
 .menu-close {
-  display: block;
   margin-left: auto;
+  background-color: transparent;
 }
 
 .menu-list {

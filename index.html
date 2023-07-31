@@ -62,7 +62,7 @@
           </li>
         </ul>
         <!-- <nav class="header-menu"> -->
-        <button type="button-menu" class="menu-open" data-menu-open>
+        <button class="menu-open" type="button-menu" .js-open-menu>
           <svg class="menu-open__header-menu" width="40px" height="40px">
             <use href="./images/icons.svg#icon-menu_40px"></use>
           </svg>
@@ -70,9 +70,9 @@
         <!-- </nav> -->
       </div>
 
-      <div class="mob-menu is-hidden" data-menu>
+      <div class="mob-menu is-hidden" .js-open-menu>
         <div class="container">
-          <button class="menu-close" data-menu-close type="button">
+          <button class="menu-close" type="button" .js-close-menu>
             <svg
               class="header-menu-nav__header-menu"
               width="40px"
@@ -852,6 +852,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
